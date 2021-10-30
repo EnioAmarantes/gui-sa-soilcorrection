@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FosforoComponent implements OnInit {
 
+  kgha = 0.0;
+  qtdAplicar = 0.0;
+  custoHa = 0.0;
+
   constructor() { }
 
   ngOnInit(): void {
