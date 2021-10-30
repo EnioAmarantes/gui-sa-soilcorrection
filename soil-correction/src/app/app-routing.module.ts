@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GeneralDataComponent } from './general-data/general-data.component';
+import { CTCComponent } from './ctc/ctc.component';
 
 const routes: Routes = [
-  {path: '', component: GeneralDataComponent}
+  {path: '', component: CTCComponent}
 ];
 
 @NgModule({
