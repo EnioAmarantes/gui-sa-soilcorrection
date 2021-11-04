@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FontesFosforo } from '../fontes/fonte-fosforo';
+import { FontesFosforo } from './fontes/fontes-fosforo';
+import { Fosforo } from './fosforo';
 
 @Component({
   selector: 'app-fosforo',
@@ -9,11 +10,11 @@ import { FontesFosforo } from '../fontes/fonte-fosforo';
 export class FosforoComponent implements OnInit {
 
   FontesFosforo = FontesFosforo;
-  kgha = 0.0;
-  qtdAplicar = 0.0;
-  custoHa = 0.0;
+  fosforo: Fosforo;
 
-  constructor() { }
+  constructor() {
+    this.fosforo = new Fosforo();
+   }
 
   ngOnInit(): void {
   }

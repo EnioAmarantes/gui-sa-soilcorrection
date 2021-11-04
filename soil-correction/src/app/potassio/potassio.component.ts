@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FontesPotassio } from './fontes/fontes-potassio';
+import { Potassio } from './potassio';
 
 @Component({
   selector: 'app-potassio',
@@ -7,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PotassioComponent implements OnInit {
 
-  constructor() { }
+  FontesPotassio = FontesPotassio;
+  potassio: Potassio;
+
+  constructor() {
+    this.potassio = new Potassio();
+   }
 
   ngOnInit(): void {
   }

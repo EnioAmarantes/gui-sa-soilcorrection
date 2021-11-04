@@ -1,1 +1,36 @@
-<p>potassio works!</p>
+<div class="row">
+    
+    <div class="col-4">
+        <h2>Correção/Recuperação de Potássio</h2>
+        <label>Participação atual do POTÁSSIO na CTC do solo:</label>
+        <input type="number" /> <span>%</span>
+
+        <label>Participação do POTÁSSIO na CTC, desejada:</label>
+        <input type="number" /> <span>%</span>
+
+        <label>Participação do POTÁSSIO na CTC, após correção:</label>
+        <input type="number" /> <span>%</span>
+
+        <label>Fonte de Potássio a usar:</label>
+        <input type="number" />
+
+        <label>Participação atual do POTÁSSIO na CTC:</label>
+        <input type="number" /> <span>%</span>
+
+        <p>Quantidade a aplicar: {{potassio.qtdAplicar}} kg/hectare</p>
+
+        <p>Custo - R$/ha {{potassio.custoHa}} </p>
+
+    </div>
+
+    <div class="col-4">
+        <h2>Fontes de POTÁSSIO</h2>
+        <ul>
+            <li *ngFor="let fp of FontesPotassio">
+                <label><strong>{{ fp.name }}</strong></label>
+                <span> R$ </span><input type="number" value="{{fp.value}}" /><span> /Ton.</span>
+            </li>
+        </ul>
+    </div>
+
+</div>
