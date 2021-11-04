@@ -8,6 +8,7 @@ import { FosforoComponent } from './fosforo/fosforo.component';
 import { PotassioComponent } from './potassio/potassio.component';
 import { CalcioMagnesioComponent } from './calcio-magnesio/calcio-magnesio.component';
 import { CTCComponent } from './ctc/ctc.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CTCComponent } from './ctc/ctc.component';
     FosforoComponent,
     PotassioComponent,
     CalcioMagnesioComponent,
-    CTCComponent
+    CTCComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
