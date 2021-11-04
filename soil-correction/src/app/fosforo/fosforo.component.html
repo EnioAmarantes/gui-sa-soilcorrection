@@ -1,33 +1,41 @@
-<div class="row">
-    
+<div class="row p-10">
+
     <div class="col-4">
-        <h2>Correção/Recuperação de Fósforo</h2>
-        <label>Teor de Fósforo a atingir</label>
-        <input type="text" /> <span>mg.dm³</span>
+        <h2 class="text-center">Correção/Recuperação de Fósforo</h2>
+
+        <div class="form-group">
+            <div class="form-floating mb-3">
+                <input id="teorFosforoAtingir" class="form-control" type="text" />
+                <label for="teorFosforoAtingir">Teor de Fósforo a atingir (mg.dm³)</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input id="fntFosforo" class="form-control" type="text" />
+                <label for="fntFosforo">Fonte de Fósforo</label>
+            </div>
+
+            <div class="form-floating mb3">
+                <input id="eficienciaFosforo" class="form-control" type="number" />
+                <label for="eficienciaFosforo">Eficiência do Fósforo (%) - OBS: Sugerimos uma eficiência entre 70% e 90%</label>
+            </div>
+        </div>
 
         <p>Essa correção de FÓSFORO, fornecerá também(kg/ha): {{fosforo.kgha}}</p>
-
-        <label>Fonte de Fósforo</label>
-        <input type="text" />
 
         <p>Quantidade a aplicar: {{fosforo.qtdAplicar}} kg/hectare</p>
 
         <p>Custo - R$/ha {{fosforo.custoHa}} </p>
 
-        <label><strong>Eficiência do Fósforo</strong></label>
-        <input type="number" /><span>%</span>
-
-        <p>OBS: Sugerimos uma eficiência entre 70% e 90%</p>
     </div>
 
-    <div class="col-4">
-        <h2>Fontes de FÓSFORO</h2>
-        <ul>
-            <li *ngFor="let ff of FontesFosforo">
-                <label><strong>{{ ff.name }}</strong></label>
-                <span> R$ </span><input type="number" value="{{ff.value}}" /><span> /Ton.</span>
-            </li>
-        </ul>
+    <div class="col-3">
+        <h2 class="text-center">Fontes de FÓSFORO</h2>
+        <div class="form-group">
+            <div class="form-floating" *ngFor="let ff of FontesFosforo">
+                <input id="{{ff.id}}" class="form-control" type="number" value="{{ff.value}}" />
+                <label for="{{ff.id}}">{{ ff.name }} - R$/Ton.</label>
+            </div>
+        </div>
     </div>
 
 </div>
