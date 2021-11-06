@@ -2,7 +2,7 @@
 
 <div>
     <label>Produto</label>
-    <input type="text"/>
+    <input type="text" [formTarget]="dadosGerais.produto"/>
     
     <label>Data</label>
     <input type="date"/>
@@ -21,7 +21,7 @@
 
 <div>
     <label>Talhão</label>
-    <input type="number" />
+    <input type="number"  />
 
     <label>Área do talhão (ha)</label>
     <input type="number" />
@@ -34,11 +34,11 @@
     <label>Textura de Solo</label>
     <input id="textSolo" type="number"/>
 
-    <span>Argiloso {{ argiloso }} </span>
+    <span >{{ dadosGerais.tipo() }} </span>
 
     <label>Sistema de Cultivo:</label>
     <input type="number"/>
-    <span> {{ cultiveSystem }} </span>
+    <span> {{ dadosGerais.cultiveSystem() }} </span>
 </div>
 
 <div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GeneralData } from './general-data';
 
 @Component({
   selector: 'app-general-data',
@@ -7,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GeneralDataComponent implements OnInit {
 
-  argiloso: string = " + 40% de argila";
-  cultiveSystem: string = "Plantio Direto";
+  dadosGerais: GeneralData;
 
-  constructor() { }
+  constructor() {
+    this.dadosGerais = new GeneralData();
+   }
 
   ngOnInit(): void {
   }
