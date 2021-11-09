@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Potassio } from './potassio';
 
 import { PotassioComponent } from './potassio.component';
 
@@ -22,4 +23,15 @@ describe('PotassioComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should calc qtdAplicar', () => {
+    let potassio = new Potassio();
+    expect(potassio.qtdAplicar()).toEqual(0.0);
+  })
+
+  it('should calc custoHectar', () => {
+    let potassio = new Potassio();
+    expect(potassio.custoHectar()).toEqual(0.0);
+  })
+
 });
