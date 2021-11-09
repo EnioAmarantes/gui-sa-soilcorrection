@@ -1,10 +1,25 @@
+import { FonteFosforo } from "./fontes/FonteFosforo";
+import { FontesFosforo } from "./fontes/fontes-fosforo";
+
 export class Fosforo {
+    teorAtingir: number;
+    fonteUtilizar: FonteFosforo;
+    eficiencia: number;
     constructor(){
-        this.kgha = 0.0;
-        this.qtdAplicar = 0.0;
-        this.custoHa = 0.0;
+        this.teorAtingir = 0.0;
+        this.fonteUtilizar = FontesFosforo[0];
+        this.eficiencia = 0.0;
     }
-    kgha: number;
-    qtdAplicar: number;
-    custoHa: number;
+
+    qtdAplicar(): number {
+        return 0.0;
+    }
+
+    kgaHa(): number {
+        return 0.0;
+    }
+
+    custoHectar(): number {
+        return 0.0;
+    }
 }
