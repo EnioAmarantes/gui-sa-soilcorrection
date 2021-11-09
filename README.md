@@ -46,3 +46,4 @@ Elaboração de uma interface gráfica para o projeto de correção de solos da 
 ![image](https://user-images.githubusercontent.com/37565576/140920849-1ba0654f-d1c6-4870-96a9-c2257969bac4.png)
 
 ## Componente de Cálcio e Magnésio
+[Em Desenvolvimento]
