@@ -3,8 +3,8 @@ Elaboração de uma interface gráfica para o projeto de correção de solos da 
 
 # Sumário
 1. [Arquitetura](#utiliza%C3%A7%C3%A3o-de-uma-arquitetura-de-componentes-que-%C3%A9-favorecida-pelo-framework-angular)
-2. [Executar projeto](#para-executar)
-3. [Testar Projeto](#)
+2. [Executar projeto](#para-executar-o-projeto)
+3. [Testar Projeto](#para-executar-os-testes)
 4. [Design de Telas](#design-das-telas)
 5. [Tela Inicial](#tela-inicial)
 6. [Componente de Menu](#componente-de-menu)
@@ -15,9 +15,19 @@ Elaboração de uma interface gráfica para o projeto de correção de solos da 
 
 # Utilização de uma [Arquitetura de Componentes](https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/guidances/supportingmaterials/use_component_architectures_CBC2F6B5.html) que é favorecida pelo Framework Angular
 
-# Para executar o projeto siga os comandos abaixo:
+# Para executar o projeto
+> Instalar dependências:
+> npm install
+>
+> Executar Projeto:
+> npm start
 
-# Para executar os testes do projeto siga os comandos abaixo:
+# Para executar os testes
+> Instalar dependências:
+> npm install
+>
+> Executar Projeto:
+> npm test
 
 # Design das Telas
 ## Tela Inicial
