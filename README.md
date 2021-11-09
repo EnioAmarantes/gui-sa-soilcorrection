@@ -9,8 +9,8 @@ Elaboração de uma interface gráfica para o projeto de correção de solos da 
 5. [Tela Inicial](#tela-inicial)
 6. [Componente de Menu](#componente-de-menu)
 7. [Componente de Dados Gerais](#componente-de-dados-gerais)
-8. [Componente de Fósforo](#componente-de-fosforo)
-9. [Componente de Potássio](#componente-de-potassio)
+8. [Componente de Fósforo](#componente-de-fósforo)
+9. [Componente de Potássio](#componente-de-potássio)
 10. [Componente de Calcio/Magnésio](#componente-de-calciomagnesio)
 
 # Utilização de uma [Arquitetura de Componentes](https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/guidances/supportingmaterials/use_component_architectures_CBC2F6B5.html) que é favorecida pelo Framework Angular
