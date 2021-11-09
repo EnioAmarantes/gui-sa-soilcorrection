@@ -1,36 +1,46 @@
-<div class="row">
+<div class="container">
+    <div class="row">
+
+        <div class="col-4">
+            <h2 class="text-center">Correção/Recuperação de Potássio</h2>
+
+            <div class="form-group">
+                <label for="partPotassioAtual">Participação atual do POTÁSSIO na CTC do solo (%):</label>
+                <input id="partPotassioAtual" class="form-control" type="number" />
     
-    <div class="col-4">
-        <h2>Correção/Recuperação de Potássio</h2>
-        <label>Participação atual do POTÁSSIO na CTC do solo:</label>
-        <input type="number" /> <span>%</span>
+                <label for="partPotassioDesejada">Participação do POTÁSSIO na CTC, desejada (%):</label>
+                <input id="partPotassioDesejada" class="form-control" type="number" />
+    
+                <label for="partPotassioApos">Participação do POTÁSSIO na CTC, após correção (%):</label>
+                <input id="partPotassioApos" class="form-control" type="number" />
+    
+                <label for="partPotassioAtual">Participação atual do POTÁSSIO na CTC (%):</label>
+                <input id="partPotassioAtual" class="form-control" type="number" />
+    
+                <label for="fontePotassioUsar">Fonte de Potássio a usar:</label>
+                <select class="form-control" id="fontePotassioUsar">
+                    <option *ngFor="let fp of FontesPotassio">{{fp.name}}</option>
+                </select>
+            </div>
 
-        <label>Participação do POTÁSSIO na CTC, desejada:</label>
-        <input type="number" /> <span>%</span>
+            <div>
+                <h3 class="text-center">Resultados</h3>
 
-        <label>Participação do POTÁSSIO na CTC, após correção:</label>
-        <input type="number" /> <span>%</span>
+                <p>Quantidade a aplicar: {{potassio.qtdAplicar()}} kg/hectare</p>
+                <p>Custo - R$/ha {{potassio.custoHectar()}} </p>
+            </div>
 
-        <label>Fonte de Potássio a usar:</label>
-        <input type="number" />
+        </div>
 
-        <label>Participação atual do POTÁSSIO na CTC:</label>
-        <input type="number" /> <span>%</span>
-
-        <p>Quantidade a aplicar: {{potassio.qtdAplicar()}} kg/hectare</p>
-
-        <p>Custo - R$/ha {{potassio.custoHectar()} </p>
+        <div class="col-4">
+            <h2 class="text-center">Fontes de POTÁSSIO</h2>
+            <div class="form-group">
+                <div class="form-floating" *ngFor="let fp of FontesPotassio">
+                    <input id="{{fp.id}}" class="form-control" type="number" value="{{fp.value}}" />
+                    <label for="{{fp.id}}">{{ fp.name }} - R$/Ton.</label>
+                </div>
+            </div>
+        </div>
 
     </div>
-
-    <div class="col-4">
-        <h2>Fontes de POTÁSSIO</h2>
-        <ul>
-            <li *ngFor="let fp of FontesPotassio">
-                <label><strong>{{ fp.name }}</strong></label>
-                <span> R$ </span><input type="number" value="{{fp.value}}" /><span> /Ton.</span>
-            </li>
-        </ul>
-    </div>
-
 </div>
