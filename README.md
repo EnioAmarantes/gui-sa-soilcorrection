@@ -17,17 +17,21 @@ Elaboração de uma interface gráfica para o projeto de correção de solos da 
 
 # Para executar o projeto
 > Instalar dependências:
-> npm install
+> 
+> - npm install
 >
 > Executar Projeto:
-> npm start
+> 
+> - npm start
 
 # Para executar os testes
 > Instalar dependências:
-> npm install
+> 
+> - npm install
 >
 > Executar Projeto:
-> npm test
+> 
+> - npm test
 
 # Design das Telas
 ## Tela Inicial
