@@ -1,56 +1,57 @@
-<h1>Equilibrio e Correção de Solo</h1>
+<div class="container">
+    <h1>Equilibrio e Correção de Solo</h1>
+    <div class="container">
+        <label>Produto</label>
+        <input type="text" class="col-4" [formTarget]="dadosGerais.produto" />
 
-<div>
-    <label>Produto</label>
-    <input type="text" [formTarget]="dadosGerais.produto"/>
-    
-    <label>Data</label>
-    <input type="date"/>
-</div>
+        <label>Data</label>
+        <input type="date" class="col-4"/>
+    </div>
 
-<div>
-    <label>Município</label>
-    <input type="text"/>
-    
-    <label>Lote</label>
-    <input type="text"/>
+    <div>
+        <label>Município</label>
+        <input type="text" />
 
-    <label>Área Total (ha)</label>
-    <input type="number"/>
-</div>
+        <label>Lote</label>
+        <input type="text" />
 
-<div>
-    <label>Talhão</label>
-    <input type="number"  />
+        <label>Área Total (ha)</label>
+        <input type="number" />
+    </div>
 
-    <label>Área do talhão (ha)</label>
-    <input type="number" />
+    <div>
+        <label>Talhão</label>
+        <input type="number" />
 
-    <label>Matrícula do Lote</label>
-    <input type="number"/>
-</div>
+        <label>Área do talhão (ha)</label>
+        <input type="number" />
 
-<div>
-    <label>Textura de Solo</label>
-    <input id="textSolo" type="number"/>
+        <label>Matrícula do Lote</label>
+        <input type="number" />
+    </div>
 
-    <span >{{ dadosGerais.tipo() }} </span>
+    <div>
+        <label>Textura de Solo</label>
+        <input id="textSolo" type="number" />
 
-    <label>Sistema de Cultivo:</label>
-    <input type="number"/>
-    <span> {{ dadosGerais.cultiveSystem() }} </span>
-</div>
+        <span>{{ dadosGerais.tipo() }} </span>
 
-<div>
-    <label>Responsável Técnico</label>
-    <input type="text" />
+        <label>Sistema de Cultivo:</label>
+        <input type="number" />
+        <span> {{ dadosGerais.cultiveSystem() }} </span>
+    </div>
 
-    <label>Profundidade da amostra de solos:</label>
-    <input type="text" />
-    <span>cm</span>
-</div>
+    <div>
+        <label>Responsável Técnico</label>
+        <input type="text" />
 
-<div>
-    <label>Resultado da análise de solos nº</label>
-    <input type="number" />
+        <label>Profundidade da amostra de solos:</label>
+        <input type="text" />
+        <span>cm</span>
+    </div>
+
+    <div>
+        <label>Resultado da análise de solos nº</label>
+        <input type="number" />
+    </div>
 </div>
