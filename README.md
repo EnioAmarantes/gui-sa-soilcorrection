@@ -2,7 +2,7 @@
 Elaboração de uma interface gráfica para o projeto de correção de solos da aula de Arquitetura de Software
 
 # Sumário
-1. [Arquitetura](#utilizacao-de-uma)
+1. [Arquitetura](#utiliza%C3%A7%C3%A3o-de-uma-arquitetura-de-componentes-que-%C3%A9-favorecida-pelo-framework-angular)
 2. [Executar projeto](#para-executar)
 3. [Testar Projeto](#)
 4. [Design de Telas](#design-das-telas)
