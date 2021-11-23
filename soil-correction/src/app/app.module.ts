@@ -9,6 +9,7 @@ import { PotassioComponent } from './potassio/potassio.component';
 import { CalcioMagnesioComponent } from './calcio-magnesio/calcio-magnesio.component';
 import { CTCComponent } from './ctc/ctc.component';
 import { MenuComponent } from './menu/menu.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MenuComponent } from './menu/menu.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

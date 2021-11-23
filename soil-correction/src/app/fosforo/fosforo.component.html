@@ -6,20 +6,21 @@
 
             <div class="form-group">
                 <div class="form-floating mb-3">
-                    <input id="teorFosforoAtingir" class="form-control" type="text" />
+                    <input id="teorFosforoAtingir" class="form-control" type="text" [value]="fosforo.teorAtingir" />
                     <label for="teorFosforoAtingir">Teor de Fósforo a atingir (mg.dm³)</label>
                 </div>
 
                 <div class="form-floating mb3">
-                    <input id="eficienciaFosforo" class="form-control" type="number" />
-                    <label for="eficienciaFosforo">Eficiência do Fósforo (%) - OBS: Sugerimos uma eficiência entre 70% e
-                        90%</label>
+                    <input id="eficienciaFosforo" class="form-control" type="number" [value]="fosforo.eficiencia"  />
+                    <label for="eficienciaFosforo">Eficiência do Fósforo (%) </label>
+                        <p>OBS: Sugerimos uma eficiência entre 70% e
+                            90%</p>
                 </div>
 
                 <div class="form-group">
                     <label for="fntFosforo">Fonte de Fósforo</label>
                     <select class="form-control" id="fntFosforo">
-                        <option *ngFor="let ff of FontesFosforo">{{ ff.name }}</option>
+                        <option *ngFor="let ff of FonteFosforo | keyvalue">{{ ff.value }}</option>
                     </select>
                 </div>
             </div>
@@ -27,8 +28,11 @@
             <div>
                 <h3 class="text-center">Resultados</h3>
 
-                <p>Quantidade a aplicar: {{fosforo.qtdAplicar()}} kg/hectare</p>
-                <p>Custo - R$/ha {{fosforo.custoHectar()}} </p>
+                <button class="btn btn-primary" (click)="CalculaResultado()">Calcular Resultados</button>
+                <button class="btn btn-primary" (click)="TestaService()">Testa Comunicação</button>
+
+                <p>Quantidade a aplicar: {{resultadoCorrecaoFosforo.qtdAplicar}} kg/hectare</p>
+                <p>Custo - R$/ha {{resultadoCorrecaoFosforo.custoHa}} </p>
                 <p>Essa correção de FÓSFORO, fornecerá também(kg/ha): {{fosforo.kgaHa()}}</p>
             </div>
 
@@ -37,9 +41,9 @@
         <div class="col-3">
             <h2 class="text-center">Fontes de FÓSFORO</h2>
             <div class="form-group">
-                <div class="form-floating" *ngFor="let ff of FontesFosforo">
-                    <input id="{{ff.id}}" class="form-control" type="number" value="{{ff.value}}" />
-                    <label for="{{ff.id}}">{{ ff.name }} - R$/Ton.</label>
+                <div class="form-floating" *ngFor="let ff of FonteFosforo | keyvalue">
+                    <input id="{{ff.key}}" class="form-control" type="number" value="{{ff.value}}" />
+                    <label for="{{ff.key}}">{{ ff.value }} - R$/Ton.</label>
                 </div>
             </div>
         </div>
