@@ -6,7 +6,7 @@
 
             <div class="form-group">
                 <div class="form-floating mb-3">
-                    <input id="teorFosforoAtingir" class="form-control" type="text" [value]="fosforo.teorAtingir" />
+                    <input id="teorFosforoAtingir" class="form-control" type="text" [value]="fosforo.teorAtingir" onchange="fosforo.teorAtingir = value"/>
                     <label for="teorFosforoAtingir">Teor de Fósforo a atingir (mg.dm³)</label>
                 </div>
 

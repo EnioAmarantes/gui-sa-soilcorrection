@@ -1,6 +1,4 @@
-import { Calculo } from "../shared/calculo";
-
-export class Potassio implements Calculo {
+export class Potassio {
     partCTC: number;
     desCTC: number;
     posCTC: number;

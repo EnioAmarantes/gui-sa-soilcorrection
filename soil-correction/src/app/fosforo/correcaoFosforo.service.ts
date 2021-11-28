@@ -17,11 +17,7 @@ export class CorrecaoFosforoService {
 
     this.httpHeaders = new HttpHeaders();
     this.httpHeaders.append('Access-Control-Allow-Headers', 'Content-Type');
-    // this.httpHeaders.append(
-    //   'Access-Control-Allow-Methods',
-    //   'GET, POST, OPTIONS, PUT, PATCH, DELETE'
-    // );
-     this.httpHeaders.append('Access-Control-Allow-Origin', '*');
+    this.httpHeaders.append('Access-Control-Allow-Origin', '*');
     this.httpHeaders.append('Content-Type', 'application/json; charset=UTF-8');
 
     this.resultadoCorrecaoFosforo = {
@@ -47,6 +43,13 @@ export class CorrecaoFosforoService {
   }
 
   testaService(){
-    return this.http.get('http://localhost:8080');
+    this.http.get<String>('http://localhost:8080/').subscribe({
+      next: (data) => {
+        alert("Servidor Respondeu: " + data);
+      },
+      error: (error) => {
+        alert("Servidor respondeu com erro: " + error.message);
+      }
+    })
   }
 }

@@ -1,4 +1,4 @@
-import { INutrienteAdicional } from "./INutrienteAdicional";
+import { INutrienteAdicional } from "../shared/INutrienteAdicional";
 
 export interface ResultadoCorrecaoFosforo{
     qtdAplicar: number;

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FontesPotassio } from './fontes/fontes-potassio';
+import { EFontePotassio } from './EFontepotassio';
 import { Potassio } from './potassio';
+import { CorrecaoPotassio } from './potassioService/correcaopotassio';
+import { PotassioServiceService } from './potassioService/potassio-service.service';
+import { ResultadoCorrecaoPotassio } from './potassioService/resultadocorrecaopotassio';
 
 @Component({
   selector: 'app-potassio',
@@ -9,14 +12,31 @@ import { Potassio } from './potassio';
 })
 export class PotassioComponent implements OnInit {
 
-  FontesPotassio = FontesPotassio;
+  FontePotassio = EFontePotassio;
   potassio: Potassio;
+  resultadoPotassio: ResultadoCorrecaoPotassio;
 
-  constructor() {
+  constructor(private potassioService: PotassioServiceService) {
     this.potassio = new Potassio();
+    this.resultadoPotassio = {
+      qtdAplicar: 0,
+      custoHa: 0
+    }
    }
 
   ngOnInit(): void {
+  }
+
+  CalculaResultado(){
+    const correcaoDados = new CorrecaoPotassio(
+      0.15,
+      EFontePotassio.CLORETO_POTASSIO,
+      1.2,
+      1.4,
+      100
+    );
+
+    this.resultadoPotassio = this.potassioService.getCorrecaoPotassio(correcaoDados);
   }
 
 }

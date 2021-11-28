@@ -1,6 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-
-import { CorrecaoFosforoService } from './correcaofosforo.service';
+import { CorrecaoFosforoService } from './correcaoFosforo.service';
 
 describe('CorrecaofosforoService', () => {
   let service: CorrecaoFosforoService;

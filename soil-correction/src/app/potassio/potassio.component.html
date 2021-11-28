@@ -19,25 +19,27 @@
     
                 <label for="fontePotassioUsar">Fonte de Potássio a usar:</label>
                 <select class="form-control" id="fontePotassioUsar">
-                    <option *ngFor="let fp of FontesPotassio">{{fp.name}}</option>
+                    <option *ngFor="let fp of FontePotassio | keyvalue">{{fp.value}}</option>
                 </select>
             </div>
 
             <div>
                 <h3 class="text-center">Resultados</h3>
 
-                <p>Quantidade a aplicar: {{potassio.qtdAplicar()}} kg/hectare</p>
-                <p>Custo - R$/ha {{potassio.custoHectar()}} </p>
+                <button class="btn btn-primary" (click)="CalculaResultado()">Calcular Resultados</button>
+
+                <p>Quantidade a aplicar: {{resultadoPotassio.qtdAplicar}} kg/hectare</p>
+                <p>Custo - R$/ha {{resultadoPotassio.custoHa}} </p>
             </div>
 
         </div>
 
-        <div class="col-4">
-            <h2 class="text-center">Fontes de POTÁSSIO</h2>
+        <div class="col-3">
+            <h2 class="text-center">Fontes de Potássio</h2>
             <div class="form-group">
-                <div class="form-floating" *ngFor="let fp of FontesPotassio">
-                    <input id="{{fp.id}}" class="form-control" type="number" value="{{fp.value}}" />
-                    <label for="{{fp.id}}">{{ fp.name }} - R$/Ton.</label>
+                <div class="form-floating" *ngFor="let ff of FontePotassio | keyvalue">
+                    <input id="{{ff.key}}" class="form-control" type="number" value="{{ff.value}}" />
+                    <label for="{{ff.key}}">{{ ff.value }} - R$/Ton.</label>
                 </div>
             </div>
         </div>
